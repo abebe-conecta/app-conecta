@@ -1,13 +1,12 @@
 <template>
-  <div id="form-login">
+  <div id='form-login'>
     <h3>Login</h3>
-    <button id="login-fb">Entrar com Facebook</button>
-
+    <button id='login-fb'>Entrar com Facebook</button>
     <form>
       <label for>E-mail</label>
-      <input type="email" placeholder="exemplo@email.com">
+      <input type='email' placeholder='exemplo@email.com'>
       <label for>Senha</label>
-      <input type="password" placeholder="Senha">
+      <input type='password' placeholder='Senha'>
       <button>Enviar</button>
     </form>
   </div>
@@ -15,14 +14,14 @@
 
 <script>
 export default {
-  name: "login"
-};
+  name: 'login'
+}
 </script>
 
 <style>
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #form-login {
@@ -43,5 +42,3 @@ button {
   max-width: 300px;
 }
 </style>
-
-

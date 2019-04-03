@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img src="../images/logo-abebe.png" alt="logo abebé" id="logo-abebe">
+  <div id='footer'>
+    <img src='../images/logo-abebe.png' alt='logo abebé' id='logo-abebe'>
     <ul>
       <li>
         <a href>Projetos</a>
@@ -18,65 +18,65 @@
         <a href>FAQ</a>
       </li>
     </ul>
-    <img src="../images/logo-vaitec.png" alt="logo vaitec" id="logo-vaitec">
+    <img src='../images/logo-vaitec.png' alt='logo vaitec' id='logo-vaitec'>
+    <!-- <h6>2019 - Produzido por Abebé Negócios de Impacto</h6> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: "footer"
-};
+  name: 'rodape'
+}
 </script>
 
 <style>
-footer {
-  background-color :white;
+#footer{
+  background-color: white;
   width: 100%;
-  height: auto;
-  position: fixed;
+  height: 200px;
   left: 0;
   bottom: 0;
-}
-
-footer div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer img {
-  width: 40px;
+/* #footer img {
+  width: 150px;
   margin-right: 10px;
   height: auto;
-}
+} */
 
-footer ul {
+#footer ul {
   display: flex;
   width: 100%;
   list-style: none;
-  align-items: center;
+  align-items: left;
   flex-flow: column wrap;
-  align-self: center;
+  align-self: left;
 }
-footer ul a {
-  color: white;
-  font-size: 14pt;
+#footer ul a {
+  color: black;
+  font-size: 10pt;
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 #logo-abebe {
   width: 150px;
-  height: 150px;
+  height: auto;
   align-self: center;
+  padding-left: 50px;
 }
 
 #logo-vaitec {
-  width: 150px;
-  height: 150px;
+  width: 300px;
+  height: auto;
   align-self: center;
 }
+
+h6{
+  text-align: left;
+  font-size: 10px;
+}
 </style>
-
-
