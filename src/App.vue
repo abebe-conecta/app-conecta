@@ -1,20 +1,16 @@
 <template>
   <div id='app'>
-    <Navbar></Navbar>
     <router-view/>
-    <rodape></rodape>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue'
-import rodape from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    rodape
+    Navbar
   }
 }
 </script>
@@ -25,9 +21,9 @@ body {
   width: 100%;
   font-family: 'Comfortaa', cursive;
 }
-#app {
+/* #app {
     display: block;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-}
+
 </style>

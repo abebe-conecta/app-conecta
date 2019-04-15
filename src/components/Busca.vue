@@ -1,13 +1,13 @@
 <template>
-  <div id="busca">
-    <input placeholder="Buscar Projetos">
+  <div id='busca'>
+    <input placeholder='Buscar Projetos'>
   </div>
 </template>
 
 <script>
 export default {
-  name: "busca"
-};
+  name: 'busca'
+}
 </script>
 
 <style>

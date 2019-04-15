@@ -1,0 +1,61 @@
+<template>
+  <div id='TodosProjetos'>
+    <Navbar :ativo='true'></Navbar>
+    <div id='busca'>
+      <input type='search' placeholder='buscar projetos'>
+    </div>
+    <img src='@/images/ec3.jpg' alt class='header'>
+    <projects></projects>
+    <rodape :ativo='true'></rodape>
+  </div>
+</template>
+
+<script>
+import Navbar from '@/components/Navbar'
+import Rodape from '@/components/Rodape'
+import projects from '@/components/Projects'
+import saibaMais from '@/components/SaibaMais'
+import busca from '@/components/Busca'
+
+export default {
+  name: 'TodosProjetos',
+  components: {
+    Navbar,
+    Rodape,
+    projects,
+    saibaMais,
+    busca
+  }
+}
+</script>
+
+<style scoped>
+#TodosProjetos {
+  width: 100%;
+  display: block
+  /* flex-wrap: wrap; */
+}
+.header {
+  width: 100%;
+  padding-top: 0px
+}
+#busca {
+  width: 100%;
+  height: 65px;
+  padding-top: 115px;
+  background-color: #ED4054;
+  display: flex;
+  justify-content: center;
+}
+input{
+  width: 65%;
+  height: 35px;
+  border-radius: 60px;
+    border-style: none;
+  text-align: center;
+  font-size: 22px
+}
+input::placeholder{
+  color: lightgray;
+}
+</style>

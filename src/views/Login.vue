@@ -1,44 +1,117 @@
 <template>
-  <div id='form-login'>
-    <h3>Login</h3>
-    <button id='login-fb'>Entrar com Facebook</button>
+  <div id='container-form-login'>
+    <navbar :ativo='false'></navbar>
+    <img class='logo-login' src='@/images/logo-conecta-azul.png'>
+    <button id='button-login-fb'>Entrar com Facebook</button>
     <form>
-      <label for>E-mail</label>
-      <input type='email' placeholder='exemplo@email.com'>
-      <label for>Senha</label>
-      <input type='password' placeholder='Senha'>
-      <button>Enviar</button>
+      <input type='email' placeholder='e-mail'>
+      <input type='password' placeholder='senha'>
+      <router-link to='/passo-um'>
+        <button class='button-login'>Entrar</button>
+      </router-link>
     </form>
+    <img src='@/images/ou-linha.jpg'>
+    <router-link to='/cadastro'>
+      <button id='botao-cadastro'>Cadastre-se</button>
+    </router-link>
+    <rodape :ativo='false'></rodape>
   </div>
 </template>
 
 <script>
+import Navbar from '@/components/Navbar'
+import Rodape from '@/components/Rodape'
+
 export default {
-  name: 'login'
+  name: 'login',
+  components: {
+    Navbar,
+    Rodape
+  }
 }
 </script>
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-}
-
-#form-login {
+<style scoped>
+#container-form-login {
   display: flex;
   justify-content: center;
-  align-content: center;
+  flex-wrap: wrap;
+  padding-top: 91px;
+  height: 500px;
+  background-color: rgb(290, 290, 290);
 }
-
-#form-login {
-  align-items: center;
-  flex-flow: column wrap;
-  max-width: 600px;
-  height: 300px;
-  background-color: rgb(238, 238, 238);
+.logo-login {
+  width: 250px;
+  height: 40px;
 }
-
-button {
-  max-width: 300px;
+#button-login-fb {
+  font-family: 'Comfortaa', cursive;
+  background-color: #556dff;
+  border-color: #556dff;
+  border-radius: 10px;
+  border-style: none;
+  text-transform: none !important;
+  letter-spacing: 4px;
+  width: 410px;
+  height: 45px;
+  font-size: 17px;
+  color: white;
+  font-weight: lighter;
+  margin: 50px 505px 30px 505px;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+input {
+  width: 410px;
+  height: 45px;
+  margin-left: 505px;
+  margin-right: 505px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+input::placeholder {
+  font-family: 'Comfortaa', cursive;
+  color: lightgray;
+  text-align: center;
+  font-size: 15pt;
+  letter-spacing: 4px;
+}
+.button-login {
+  font-family: 'Comfortaa', cursive;
+  background-color: #556dff;
+  border-style: none;
+  border-radius: 70px;
+  width: 190px;
+  height: 35px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  margin: 55px 0 55px 0;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 2px;
+}
+#botao-cadastro {
+  font-family: 'Comfortaa', cursive;
+  font-size: 8.5pt;
+  width: 190px;
+  height: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 5px;
+  border-radius: 90px;
+  border-style: none;
+  background-color: #ed4054;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+img {
+  width: 25em;
+  height: 1.3em;
+  margin-left: 25em;
+  margin-right: 25em;
 }
 </style>
