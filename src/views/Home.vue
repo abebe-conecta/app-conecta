@@ -1,11 +1,11 @@
 <template>
-  <div id='home'>
-    <navbar :ativo='true'></navbar>
-    <img src='@/images/header.jpg' class='header'>
-    <projects></projects>
-    <saiba-mais></saiba-mais>
-    <rodape :ativo='true'></rodape>
-  </div>
+<div id='home'>
+  <navbar :ativo='true'></navbar>
+  <div id="header-home"></div>
+  <projects></projects>
+  <saiba-mais></saiba-mais>
+  <rodape :ativo='true'></rodape>
+</div>
 </template>
 
 <script>
@@ -25,24 +25,34 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+/* @import "../assets/variables.css"; */
+
 #home {
-  width: 100%;
-  display: block;
+    width: 1348px;
+    display: block;
+    @media(max-width: 800px) {
+        width: 100%;
+    }
 }
 
-.header {
-  max-width: 100%;
-  height: auto;
-  margin-top: 90px;
-  /* background: url(header.jpg) repeat;
-  /* opacity: 0.5;
-  filter: alpha(opacity=50); */
-}
+#header-home {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 750px;
+    padding-top: 90px;
 
-/* @media (min-width: 768px){
-  .header{
-    background
-  }
-} */
+    @media(max-width: 800px) {
+        background-image: url("../images/headerSmall.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 900px;
+        padding-top: 90px;
+    }
+}
 </style>

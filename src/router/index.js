@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/views/Home'
-import login from '@/views/Login'
+import Home from '@/views/Home'
+import Login from '@/views/Login'
+import Cadastro from '@/views/Cadastro'
 import EnviarTelaUm from '@/views/EnviarTelaUm'
 import TodosProjetos from '@/views/TodosProjetos'
 import TituloRascunho from '@/views/TituloRascunho'
-import PassoUm from '@/views/PassoUm'
-import PassoDois from '@/views/PassoDois'
-import PassoTres from '@/views/PassoTres'
-import PassoQuatro from '@/views/PassoQuatro'
+import PassoUm from '@/views/EnviarProjeto/PassoUm'
+import PassoDois from '@/views/EnviarProjeto/PassoDois'
+import PassoTres from '@/views/EnviarProjeto/PassoTres'
+import PassoQuatro from '@/views/EnviarProjeto/PassoQuatro'
 import ProjetoEnviado from '@/views/ProjetoEnviado'
 
 Vue.use(Router)
@@ -17,13 +18,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: home
+      name: 'Home',
+      component: Home
     },
     {
       path: '/login',
-      name: 'login',
-      component: login
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/cadastro',
+      name: 'Cadastro',
+      component: Cadastro
     },
     {
       path: '/enviar-projeto',

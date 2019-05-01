@@ -7,10 +7,11 @@
       <router-link to='/login'>Login</router-link>
       <router-link to='/sobre'>Sobre</router-link>
       <router-link to='/faq'>FAQ</router-link>
-      <h6>2019 - Produzido por Abebé Negócios de Impacto</h6>
+      <img class='rodape-frase' src='../images/rodape.png' alt=''>
+      <!-- <h6>2019 - Produzido por Abebé Negócios de Impacto</h6> -->
     </div>
 
-    <img src='../images/logo-vaitec.png' alt='logo vaitec' id='logo-vaitec'>
+    <!-- <img src='../images/logo-vaitec.png' alt='logo vaitec' id='logo-vaitec'> -->
   </div>
 </template>
 
@@ -75,7 +76,10 @@ export default {
   /* align-self: center; */
   margin: 107px 140.7px 107px 0;
 }
+.rodape-frase {
+  width: 100%;
 
+}
 h6 {
   text-align: left;
   font-size: 10px;

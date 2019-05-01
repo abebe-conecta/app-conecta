@@ -1,0 +1,35 @@
+    <!-- <form> -->
+        <!-- <label for="">Nome*</label>
+        <input type="text">
+
+        <label for="">E-mail*</label>
+        <input type="email">
+
+        <label for="">Senha*</label>
+        <input type="password">        
+
+        <label for="">Confirme sua senha*</label>
+        <input type="password">
+
+        <label for="">Data de Nascimento*</label>
+        <input type="password"
+
+        <label for="">Gênero*</label>
+        <input type="password">
+
+        <label for="">Etnia*</label>
+        <input type="password"> 
+
+        <label for="">Estado*</label>
+        <input type="password"> 
+
+        <label for="">Cidade*</label>
+        <input type="password">
+
+        <label for="">Área de atuação*</label>
+        <input type="password">
+
+        <label for="">Tem MEI/CNPJ?*</label>
+        <input type="radio">sim 
+        <input type="radio">não                                 -->
+    <!-- </form> -->

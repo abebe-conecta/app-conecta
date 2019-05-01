@@ -1,7 +1,7 @@
 <template>
   <div id='passo-um'>
     <img
-      src='../images/logo-conecta-branco.png'
+      src='../../images/logo-conecta-branco.png'
       style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;'
       alt
     >
