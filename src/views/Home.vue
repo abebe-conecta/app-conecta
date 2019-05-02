@@ -43,13 +43,13 @@ export default {
     width: 100%;
     height: auto;
     padding-top: 90px;
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         display: none;
     }
 }
 .header-image-small {
     display: none;
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         display: inline;
         width: 100%;
         height: auto;

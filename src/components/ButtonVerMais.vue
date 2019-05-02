@@ -1,6 +1,6 @@
 <template>
   <router-link to='/projetos'>
-    <button>Ver Mais</button>
+    <button class='botao-ver-mais'>Ver Mais</button>
   </router-link>
 </template>
 
@@ -11,11 +11,11 @@ export default {
 </script>
 
 <style>
-button {
+.botao-ver-mais {
   font-family: 'Comfortaa', cursive;
-  background-color: #556dff;
+  background-color: #ff3864;
   border-style: none;
-  border-radius: 70px;
+  border-radius: 15px;
   width: 210px;
   height: 55px;
   margin-top: 45px;

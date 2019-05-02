@@ -114,13 +114,17 @@ export default {
     height: 250px;
     border-radius: 30px 30px 0 0;
 }
-.VueCarousel-wraper {
+// .VueCarousel-wraper {
+//     width: 90%;
+//     align-self: center;
+//
+//     @media(max-width: 800px) {
+//         width: 90%;
+//     }
+// }
+.VueCarousel {
     width: 90%;
     align-self: center;
-
-    @media(max-width: 800px) {
-        width: 90%;
-    }
 }
 .VueCarousel-slide {
     max-width: 395px;

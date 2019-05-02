@@ -26,7 +26,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media(max-width:800px) {
+    align-items: center;
+    @media(max-width: 800px) {
         width: 100%;
         height: auto;
     }
@@ -38,11 +39,25 @@ export default {
     text-align: left;
     font-size: 60px;
     color: #556dff;
-    margin-right: 780px;
+    margin-right: 760px;
     letter-spacing: 15px;
+    @media(max-width: 500px) {
+        margin-right: 200px;
+    }
+    @media(max-width: 800px) {
+        width: 50%;
+        margin-right: 305px;
+        font-size: 40px;
+    }
+    @media(max-width: 900px) {
+        margin-right: 330px;
+    }
 }
 #container h2::after {
     content: '_';
     border-radius: 10px;
+    @media(max-width: 800px) {
+        width: 50%;
+    }
 }
 </style>

@@ -2,7 +2,7 @@
 <div id='mais'>
   <img class='big' src="@/images/Home-3.jpg" alt="">
   <img class='small' src="@/images/saibaMaisSmall.jpg" alt="">
-  <router-link to='/sobre'><button>Saiba Mais</button></router-link>
+  <router-link to='/sobre'><button class='botao-saiba-mais'>Saiba Mais</button></router-link>
 </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 #mais {
   margin: 0;
   width: 100%;
@@ -24,33 +24,37 @@ export default {
   justify-content: center;
   text-align: center;
 }
-
 p {
   color: white;
   font-size: 16px;
   align-self: center;
 }
-
-button {
+.botao-saiba-mais {
+  font-family: 'Comfortaa', cursive;
   background-color: #ff3864;
+  border-style: none;
   border-radius: 15px;
+  width: 210px;
+  height: 55px;
+  margin-top: 45px;
+  text-transform: uppercase;
+  margin: 55px 0 55px 0;
+  font-size: 20px;
   color: white;
-  align-self: center;
 }
-
 .big {
   width: 100%;
   height: auto;
   @media(max-width: 800px) {
-    display: none
+    display: none;
   }
 }
 .small {
-  width: 100%;
-  height: auto;
   display: none;
   @media(max-width: 800px) {
     display: inline;
+    width: 100%;
+    height: auto
   }
 }
 </style>

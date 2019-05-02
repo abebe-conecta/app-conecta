@@ -3,26 +3,27 @@
   <router-link to='/'>
     <img src='../images/logo-conecta-azul.png' alt>
   </router-link>
+  <div class='menu-desktop'>
+    <ul>
+      <router-link to='/projetos'>
+        <li class='text-nav'>Projetos</li>
+      </router-link>
 
-  <ul>
-    <router-link to='/projetos'>
-      <li class='text-nav'>Projetos</li>
-    </router-link>
+      <router-link to='/enviar-projeto'>
+        <li class='text-nav'>Enviar</li>
+      </router-link>
 
-    <router-link to='/enviar-projeto'>
-      <li class='text-nav'>Enviar</li>
-    </router-link>
+      <router-link to='/login'>
+        <li class='text-nav'>Login</li>
+      </router-link>
 
-    <router-link to='/login'>
-      <li class='text-nav'>Login</li>
-    </router-link>
+      <router-link to='/login'>
+        <li class='text-nav'>Sobre</li>
+      </router-link>
+    </ul>
+  </div>
 
-    <router-link to='/login'>
-      <li class='text-nav'>Sobre</li>
-    </router-link>
-  </ul>
   <menu-hamburguer class='m-burguer'></menu-hamburguer>
-
 </div>
 </template>
 
@@ -50,7 +51,7 @@ export default {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         width: 100%;
         height: 130px;
         position: fixed;
@@ -60,12 +61,15 @@ img {
     width: 200px;
     height: auto;
     padding-left: 40px !important;
-    /* padding-top: 30px !important;
-  padding-bottom: 30px !important */
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         width: 220px;
         height: auto;
     }
+}
+.menu-desktop {
+    display: inline;
+    margin-right: 60px;
+    width: 40%;
 }
 ul {
     display: flex;
@@ -73,8 +77,7 @@ ul {
     list-style: none;
     text-decoration: none;
     justify-content: space-around;
-    padding-left: 500px !important;
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         display: none;
     }
 }
@@ -96,7 +99,7 @@ a:-webkit-any-link {
 }
 .m-burguer {
     display: none;
-    @media(max-width: 800px) {
+    @media(max-width: 900px) {
         display: inline;
         width: 6%;
         height: 70px;
