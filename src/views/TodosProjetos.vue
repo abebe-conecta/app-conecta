@@ -36,7 +36,7 @@ export default {
   /* flex-wrap: wrap; */
 }
 .header {
-  width: 100%;
+  width: 100vw;
   padding-top: 0px
 }
 #busca {

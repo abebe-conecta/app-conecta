@@ -1,6 +1,6 @@
 <template>
 <!-- <div id='cardContainer'> -->
-<carousel v-bind:perPage="1">
+<carousel v-bind:perPage='1'>
   <slide>
     <div class='card'>
       <img src='../images/ex1.jpg' alt>
@@ -125,6 +125,12 @@ export default {
 .VueCarousel {
     width: 90%;
     align-self: center;
+    @media(max-width: 800px) {
+        width: 50%;
+    }
+}
+.VueCarousel-wrapper {
+    height: 510px;
 }
 .VueCarousel-slide {
     max-width: 395px;

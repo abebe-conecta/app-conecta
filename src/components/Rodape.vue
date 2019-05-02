@@ -1,18 +1,19 @@
 <template>
-  <div id='footer' v-if='ativo'>
-    <img src='../images/logo-abebe.png' alt='logo abebé' id='logo-abebe'>
-    <div id='mapa-do-site'>
-      <router-link to='/projetos'>Projetos</router-link>
-      <router-link to='/enviar-projeto'>Enviar</router-link>
-      <router-link to='/login'>Login</router-link>
-      <router-link to='/sobre'>Sobre</router-link>
-      <router-link to='/faq'>FAQ</router-link>
-      <img class='rodape-frase' src='../images/rodape.png' alt=''>
-      <!-- <h6>2019 - Produzido por Abebé Negócios de Impacto</h6> -->
-    </div>
-
-    <!-- <img src='../images/logo-vaitec.png' alt='logo vaitec' id='logo-vaitec'> -->
+<div id='footer' v-if='ativo'>
+  <img src='@/images/logo-abebe.png' alt='logo abebé' class='logo-abebe'>
+  <div id='mapa-do-site'>
+    <router-link to='/projetos'>Projetos</router-link>
+    <router-link to='/enviar-projeto'>Enviar</router-link>
+    <router-link to='/login'>Login</router-link>
+    <router-link to='/sobre'>Sobre</router-link>
+    <router-link to='/faq'>FAQ</router-link>
+    <img src='@/images/logo-vaitec.png' class='logo-vaitec' alt='logo vai tec'>
+    <img class='rodape-frase' src='@/images/rodape.png' alt=''>
+    <!-- <h6>2019 - Produzido por Abebé Negócios de Impacto</h6> -->
   </div>
+
+  <!-- <img src='../images/logo-vaitec.png' alt='logo vaitec' id='logo-vaitec'> -->
+</div>
 </template>
 
 <script>
@@ -36,15 +37,17 @@ export default {
   justify-content: space-around;
   align-items: center;
 }
+
 #mapa-do-site {
   display: flex;
-  width: 100%;
+  width: 320px;
   height: 320px;
   flex-direction: column;
-  justify-content: space-around;
-  padding-top: 130px;
-  padding-left: 50px
+  margin: 100px 720px 0 0;
+  /* padding-top: 130px;
+  padding-left: 50px */
 }
+
 #mapa-do-site a {
   text-decoration: none;
   text-transform: uppercase;
@@ -55,9 +58,10 @@ export default {
   font-size: 10pt;
   font-weight: bolder;
   line-height: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   letter-spacing: 0.2em;
 }
+
 #mapa-do-site h6 {
   text-align: left;
   font-weight: normal;
@@ -65,23 +69,19 @@ export default {
   letter-spacing: 2px;
 }
 
-#logo-abebe {
+.logo-abebe {
   width: 200px;
-  margin: 70px 5px 15px 107px;
+  height: auto;
+  /* margin: 70px 5px 15px 107px; */
 }
 
-#logo-vaitec {
+.logo-vaitec {
   width: 300px;
   height: auto;
-  /* align-self: center; */
-  margin: 107px 140.7px 107px 0;
+  margin: 100px 0 0 720px;
 }
-.rodape-frase {
-  width: 100%;
 
-}
-h6 {
-  text-align: left;
-  font-size: 10px;
+.rodape-frase {
+  width: 1000px;
 }
 </style>

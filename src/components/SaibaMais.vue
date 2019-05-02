@@ -33,11 +33,12 @@ p {
   font-family: 'Comfortaa', cursive;
   background-color: #ff3864;
   border-style: none;
-  border-radius: 15px;
-  width: 210px;
-  height: 55px;
+  border-radius: 75px;
+  width: 240px;
+  height: 45px;
   margin-top: 45px;
   text-transform: uppercase;
+  letter-spacing: 3px;
   margin: 55px 0 55px 0;
   font-size: 20px;
   color: white;

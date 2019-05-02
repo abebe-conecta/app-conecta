@@ -40,7 +40,7 @@ export default {
     height: auto;
 }
 .header-image {
-    width: 100%;
+    width: 100vw;
     height: auto;
     padding-top: 90px;
     @media(max-width: 900px) {
@@ -51,7 +51,7 @@ export default {
     display: none;
     @media(max-width: 900px) {
         display: inline;
-        width: 100%;
+        width: 100vw;
         height: auto;
         padding-top: 90px;
     }
