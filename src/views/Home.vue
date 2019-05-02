@@ -1,7 +1,9 @@
-<template>
+'<template>
 <div id='home'>
   <navbar :ativo='true'></navbar>
-  <div id="header-home"></div>
+  <div id='header-home'></div>
+  <img src='@/images/header.jpg' class='header-image' alt=''>
+  <img src='@/images/headerSmall.jpg' class='header-image-small' alt=''>
   <projects></projects>
   <saiba-mais></saiba-mais>
   <rodape :ativo='true'></rodape>
@@ -25,9 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-/* @import "../assets/variables.css"; */
-
+<style lang='scss' scoped>
 #home {
     width: 1348px;
     display: block;
@@ -35,23 +35,24 @@ export default {
         width: 100%;
     }
 }
-
 #header-home {
-    background-image: url("../images/header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     width: 100%;
-    height: 750px;
+    height: auto;
+}
+.header-image {
+    width: 100%;
+    height: auto;
     padding-top: 90px;
-
     @media(max-width: 800px) {
-        background-image: url("../images/headerSmall.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        display: none;
+    }
+}
+.header-image-small {
+    display: none;
+    @media(max-width: 800px) {
+        display: inline;
         width: 100%;
-        height: 900px;
+        height: auto;
         padding-top: 90px;
     }
 }

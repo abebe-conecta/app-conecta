@@ -48,6 +48,7 @@ button {
 .small {
   width: 100%;
   height: auto;
+  display: none;
   @media(max-width: 800px) {
     display: inline;
   }
