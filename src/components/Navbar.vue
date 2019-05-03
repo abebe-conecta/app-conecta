@@ -44,7 +44,8 @@ export default {
 <style lang="scss" scoped>
 #navbar {
     margin: 0;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     height: 90px;
     position: fixed;
     background-color: white;
@@ -53,7 +54,8 @@ export default {
     align-items: center;
     justify-content: space-between;
     @media(max-width: 900px) {
-        width: 100%;
+        width: 100vw;
+        max-width: 100%;
         height: 130px;
         position: fixed;
     }

@@ -1,22 +1,19 @@
 <template>
-<Slide right width='800'>
-  <a href='#'>
-    <ul>
-      <router-link to="/projetos">
-        <li>Projetos</li>
-      </router-link>
-      <router-link to="/enviar-projeto">
-        <li>Enviar</li>
-      </router-link>
-      <router-link to="/login">
-        <li>Login</li>
-      </router-link>
-      <router-link to="/sobre">
-        <li>Sobre</li>
-      </router-link>
-
-    </ul>
-  </a>
+<Slide noOverlay right width='800'>
+  <ul class='lista-menu-burguer'>
+    <router-link to="/projetos">
+      <li>Projetos</li>
+    </router-link>
+    <router-link to="/enviar-projeto">
+      <li>Enviar</li>
+    </router-link>
+    <router-link to="/login">
+      <li>Login</li>
+    </router-link>
+    <router-link to="/sobre">
+      <li>Sobre</li>
+    </router-link>
+  </ul>
 </Slide>
 </template>
 
@@ -42,12 +39,12 @@ export default {
     position: fixed;
     width: 46px;
     height: 30px;
-    left: auto;
+    // left: auto;
     top: 36px;
     cursor: pointer;
     margin: 12px 80px;
     @media(max-width: 900px) {
-    margin: 12px 60px;
+        margin: 12px 60px;
     }
     @media(max-width: 500px) {
         margin: 12px 20px;
@@ -65,15 +62,25 @@ export default {
 .cross-style {
     position: absolute;
     top: 12px;
-    right: 2px;
+    right: 0 !important;
     cursor: pointer;
 }
 .bm-cross {
     background: #FFFFFF;
 }
 .bm-cross-button {
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
+    @media(max-width: 900px) {
+        height: 100px;
+        width: 100px;
+        padding: 60px 70px 0 0;
+    }
+    @media(max-width: 600px) {
+        height: 100px;
+        width: 100px;
+        padding: 60px 70px 0 0;
+    }
 }
 .bm-menu {
     height: 100%;
@@ -84,33 +91,42 @@ export default {
     left: 0;
     background-color: #556dff;
     overflow-x: hidden;
-    padding-top: 60px;
     transition: 0.5s;
 }
 .bm-item-list {
     color: #000000;
-    margin-left: 10%;
     font-size: 40px;
 }
-.bm-item-list > * {
+.lista-menu-burguer {
     display: flex;
     text-decoration: none;
     padding: 0.7em;
-}
-.bm-item-list > * > ul {
     list-style-type: none;
     color: black;
     text-transform: uppercase;
     text-decoration: none;
+    flex-flow: wrap column;
+    @media(max-width: 600px) {
+        width: 100vw;
+        max-width: 100%;
+        margin-left: 100px;
+    }
 }
-.bm-item-list > * > li {
+.lista-menu-burguer li {
     text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding-bottom: 130px;
 }
-.bm-item-list > * > li:hover {
+.lista-menu-burguer li:hover {
     color: white;
 }
-.bm-item-list > * > li {
-    margin-left: 10px;
-    font-weight: 700;
+.lista-menu-burguer a {
+    text-decoration: none;
+    color: black;
+}
+.bm-cross {
+    width: 73px !important;
+    height: 4px !important;
 }
 </style>

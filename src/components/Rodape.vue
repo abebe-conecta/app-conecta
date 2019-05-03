@@ -65,6 +65,25 @@ export default {
         justify-content: space-around;
         align-items: center;
     }
+    @media(max-width: 800px) {
+        width: 100vw;
+        max-width: 100%;
+    }
+    @media(max-width: 500px) {
+        width: 100vw;
+        max-width: 100%;
+        height: 770px;
+    }
+    @media(max-width: 600px) {
+        width: 100vw;
+        max-width: 100%;
+        height: 930px;
+    }
+    @media(max-width: 400px) {
+        width: 100vw;
+        max-width: 100%;
+        height: 650px;
+    }
 }
 #mapa-do-site {
     display: flex;
@@ -74,6 +93,18 @@ export default {
     margin: 40px 320px 0 0;
     @media(max-width: 900px) {
         margin: 0 0 1090px 500px;
+    }
+    @media(max-width: 800px) {
+      margin: 0 0 340px 230px;
+    }
+    @media(max-width: 600px) {
+          margin: 0 0 530px 400px;
+    }
+    @media(max-width: 500px) {
+        margin: 0 0 450px 290px;
+    }
+    @media(max-width: 400px) {
+        margin: 0 0 280px 210px;
     }
 }
 #mapa-do-site a {
@@ -92,28 +123,19 @@ export default {
         font-size: 30pt;
         padding-bottom: 150px;
     }
+    @media(max-width: 600px) {
+        font-size: 18pt;
+        padding-bottom: 50px;
+    }
+    @media(max-width: 400px) {
+        font-size: 15pt;
+        padding-bottom: 50px;
+    }
 }
-
 #mapa-do-site h6 {
     text-align: left;
     font-weight: normal;
     font-size: 12pt;
     letter-spacing: 2px;
 }
-
-/* .logo-abebe {
-  width: 200px;
-  height: auto;
-  /* margin: 70px 5px 15px 107px; */
-/* }
-
-.logo-vaitec {
-  width: 300px;
-  height: auto;
-  margin: 100px 0 0 720px;
-}
-
-.rodape-frase {
-  width: 1000px;
-} */
 </style>
