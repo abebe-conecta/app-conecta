@@ -29,18 +29,20 @@ export default {
 
 <style lang='scss' scoped>
 #home {
-    width: 1348px;
+    margin: 0;
+    max-width: 100%;
     display: block;
     @media(max-width: 800px) {
         width: 100%;
     }
 }
 #header-home {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 .header-image {
     width: 100vw;
+    max-width: 100%;
     height: auto;
     padding-top: 90px;
     @media(max-width: 900px) {
@@ -52,6 +54,7 @@ export default {
     @media(max-width: 900px) {
         display: inline;
         width: 100vw;
+        max-width: 100%;
         height: auto;
         padding-top: 90px;
     }

@@ -77,28 +77,16 @@ export default {
 }
 .bm-menu {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1000;
-    /* Stay on top */
     top: 0;
     left: 0;
     background-color: #556dff;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 60px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /*0.5 second transition effect to slide in the sidenav*/
 }
-
-/* .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-} */
 .bm-item-list {
     color: #000000;
     margin-left: 10%;
@@ -113,6 +101,7 @@ export default {
     list-style-type: none;
     color: black;
     text-transform: uppercase;
+    text-decoration: none;
 }
 .bm-item-list > * > li {
     text-decoration: none;
