@@ -1,7 +1,7 @@
 <template>
   <div id='container-primeira-tela'>
     <navbar :ativo='false'></navbar>
-    <img class='home-enviar-um' src='../images/Home_Enviar-01.jpg' alt>
+    <img class='home-enviar-um' src='@/assets/images/EnviarProjeto/Home_Enviar-01.jpg' alt>
     <router-link to='/titulo-rascunho'>
       <button id='botao-iniciar-envio'>Vamo lá!</button>
     </router-link>

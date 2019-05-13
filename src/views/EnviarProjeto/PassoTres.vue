@@ -1,40 +1,31 @@
 <template>
-  <div id='passo-um'>
-    <img
-      src='../../images/logo-conecta-branco.png'
-      style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;'
-      alt
-    >
-    <h4>Passo 1 de 4</h4>
+<div id='passo-um'>
+  <router-link to='/'> <img src='@/assets/images/Navbar/logo-conecta-branco.png' style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt='logo conecta'></router-link>
+  <h4>Passo 1 de 4</h4>
 
-    <form action>
-      <label for>Local</label>
-      <textarea
-        name
-        id
-        cols='30'
-        rows='10'
-        placeholder='Bairro, cidade e estado onde o seu projeto já foi ou será realizado'
-      ></textarea>
+  <form action>
+    <label for>Local</label>
+    <textarea v-model='local' name id cols='30' rows='10' placeholder='Bairro, cidade e estado onde o seu projeto já foi ou será realizado'></textarea>
 
-      <label for>Valor estimado</label>
-      <input
-        name='valor'
-        id=''
-        rows='10'
-        placeholder='R$ 0,00'
-      >
-    </form>
+    <label for>Valor estimado</label>
+    <input v-model='valor' name='valor' id='' rows='10' placeholder='R$ 0,00'>
+  </form>
 
-    <router-link to='/passo-quatro'>
-      <button id='botao-passo-um'>Próximo</button>
-    </router-link>
-  </div>
+  <router-link to='/passo-quatro'>
+    <button id='botao-passo-um'>Próximo</button>
+  </router-link>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'passo-tres'
+  name: 'passo-tres',
+  data () {
+    return {
+      local: '',
+      valor: ''
+    }
+  }
 }
 </script>
 
@@ -51,14 +42,17 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 img {
   width: 200px;
 }
+
 h4 {
   font-size: 20pt;
   font-weight: normal;
   letter-spacing: 4px;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -69,6 +63,7 @@ form {
   width: 50%;
   height: 50%;
 }
+
 label {
   align-self: baseline;
   margin-top: 30px;
@@ -78,6 +73,7 @@ label {
   font-weight: normal;
   letter-spacing: 4px;
 }
+
 textarea {
   width: 90%;
   height: 50px;
@@ -85,6 +81,7 @@ textarea {
   margin-top: 0px;
   margin-bottom: 30px;
 }
+
 textarea::placeholder {
   font-family: 'Comfortaa', cursive;
   color: #b4b4b4;
@@ -94,6 +91,7 @@ textarea::placeholder {
   line-height: 17px;
   padding: 8px 0 0 10px;
 }
+
 #botao-passo-um {
   font-family: 'Comfortaa', cursive;
   width: 181px;

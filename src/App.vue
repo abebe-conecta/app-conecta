@@ -21,9 +21,4 @@ body {
   max-width: 100%;
   font-family: 'Comfortaa', cursive;
 }
-/* #app {
-    display: block;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-
 </style>

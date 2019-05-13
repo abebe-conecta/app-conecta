@@ -2,9 +2,9 @@
 <div id='home'>
   <navbar :ativo='true'></navbar>
   <div id='header-home'></div>
-  <img src='@/images/header.jpg' class='header-image' alt=''>
-  <img src='@/images/headerSmall.jpg' class='header-image-small' alt=''>
-  <projects></projects>
+  <img src='@/assets/images/Home/header.jpg' class='header-image' alt=''>
+  <img src='@/assets/images/Home/headerSmall.jpg' class='header-image-small' alt=''>
+  <projetos></projetos>
   <saiba-mais></saiba-mais>
   <rodape :ativo='true'></rodape>
 </div>
@@ -13,7 +13,7 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Rodape from '@/components/Rodape'
-import projects from '@/components/Projects'
+import Projetos from '@/components/Projetos'
 import SaibaMais from '@/components/SaibaMais'
 
 export default {
@@ -21,7 +21,7 @@ export default {
   components: {
     Navbar,
     Rodape,
-    projects,
+    Projetos,
     SaibaMais
   }
 }

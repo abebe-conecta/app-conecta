@@ -1,7 +1,7 @@
 <template>
 <div id='mais'>
-  <img class='big' src="@/images/Home-3.jpg" alt="">
-  <img class='small' src="@/images/saibaMaisSmall.jpg" alt="">
+  <img class='big' src="@/assets/images/SaibaMais/Home-3.jpg" alt="">
+  <img class='small' src="@/assets/images/SaibaMais/saibaMaisSmall.jpg" alt="">
   <router-link to='/sobre'><button class='botao-saiba-mais'>Saiba Mais</button></router-link>
 </div>
 </template>

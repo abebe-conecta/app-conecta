@@ -1,15 +1,11 @@
 <template>
   <div id='passo-um'>
-    <img
-      src='../../images/logo-conecta-branco.png'
-      style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;'
-      alt
-    >
+  <router-link to='/'> <img src='@/assets/images/Navbar/logo-conecta-branco.png' style='align-self: left; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt='logo conecta'></router-link>
     <h4>Passo 2 de 4</h4>
 
     <form action>
       <label for>Formato do projeto</label>
-      <select name='cars'>
+      <select v-model='formato' name='cars'>
         <option value></option>
         <option value='saab'>Exposição</option>
         <option value='fiat'>Intervenção</option>
@@ -35,7 +31,13 @@
 
 <script>
 export default {
-  name: 'passo-dois'
+  name: 'passo-dois',
+  data () {
+    return {
+      formato: '',
+      necessidade: ''
+    }
+  }
 }
 </script>
 

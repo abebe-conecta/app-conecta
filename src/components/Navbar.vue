@@ -1,7 +1,7 @@
 <template>
 <div id='navbar' v-if='ativo'>
   <router-link to='/'>
-    <img src='../images/logo-conecta-azul.png' alt>
+    <img src='@/assets/images/Navbar/logo-conecta-azul.png' alt>
   </router-link>
   <div class='menu-desktop'>
     <ul>
@@ -17,8 +17,8 @@
         <li class='text-nav'>Login</li>
       </router-link>
 
-      <router-link to='/login'>
-        <li class='text-nav'>Sobre</li>
+      <router-link to='/como-funciona'>
+        <li class='text-nav'>Como Funciona</li>
       </router-link>
     </ul>
   </div>

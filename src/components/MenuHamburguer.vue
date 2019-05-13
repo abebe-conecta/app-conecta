@@ -11,7 +11,7 @@
       <li>Login</li>
     </router-link>
     <router-link to="/sobre">
-      <li>Sobre</li>
+      <li>Como Funciona</li>
     </router-link>
   </ul>
 </Slide>
@@ -47,6 +47,9 @@ export default {
         margin: 12px 60px;
     }
     @media(max-width: 500px) {
+        margin: 12px 20px;
+    }
+    @media(max-width: 400px) {
         margin: 12px 20px;
     }
 }

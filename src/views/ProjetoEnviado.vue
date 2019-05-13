@@ -1,7 +1,7 @@
 <template>
   <div id='projeto-enviado'>
     <img
-      src='../images/logo-conecta-branco.png'
+      src='@/assets/images/Navbar/logo-conecta-branco.png'
       style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;'
       alt
     >

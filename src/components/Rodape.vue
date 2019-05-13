@@ -5,7 +5,7 @@
       <router-link to='/projetos'>Projetos</router-link>
       <router-link to='/enviar-projeto'>Enviar</router-link>
       <router-link to='/login'>Login</router-link>
-      <router-link to='/sobre'>Sobre</router-link>
+      <router-link to='/como-funciona'>Como Funciona</router-link>
       <router-link to='/faq'>FAQ</router-link>
     </div>
   </div>
@@ -14,8 +14,8 @@
       <router-link to='/projetos'>Projetos</router-link>
       <router-link to='/enviar-projeto'>Enviar</router-link>
       <router-link to='/login'>Login</router-link>
-      <router-link to='/sobre'>Sobre</router-link>
-      <router-link to='/faq'>FAQ</router-link>
+      <router-link to='/como-funciona'>Como Funciona</router-link>
+      <router-link to='/faq'>Perguntas Frequentes</router-link>
     </div>
   </div>
 </div>
@@ -34,7 +34,7 @@ export default {
 #footer {
     display: inline;
     font-family: 'Comfortaa', cursive;
-    background-image: url("../images/footer.jpg");
+    background-image: url("../assets/images/Rodape/footer.jpg");
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -53,7 +53,7 @@ export default {
     display: none;
     @media(max-width: 900px) {
         font-family: 'Comfortaa', cursive;
-        background-image: url("../images/footerSmall.jpg");
+        background-image: url("../assets/images/Rodape/footerSmall.jpg");
         background-position: center;
         background-size: cover;
         width: 100vw;

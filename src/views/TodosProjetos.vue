@@ -4,8 +4,8 @@
   <div id='busca'>
     <input type='search' placeholder='buscar projetos'>
   </div>
-  <img src='@/images/ec3.jpg' alt class='header'>
-  <projects></projects>
+  <img src='@/assets/images/Projetos/ec3.jpg' alt class='header'>
+  <projetos></projetos>
   <rodape :ativo='true'></rodape>
 </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 import Navbar from '@/components/Navbar'
 import Rodape from '@/components/Rodape'
-import projects from '@/components/Projects'
+import Projetos from '@/components/Projetos'
 import saibaMais from '@/components/SaibaMais'
 import busca from '@/components/Busca'
 
@@ -22,7 +22,7 @@ export default {
   components: {
     Navbar,
     Rodape,
-    projects,
+    Projetos,
     saibaMais,
     busca
   }

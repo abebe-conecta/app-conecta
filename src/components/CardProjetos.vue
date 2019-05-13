@@ -1,64 +1,31 @@
 <template>
-<!-- <div id='cardContainer'> -->
-<carousel v-bind:perPage='1'>
-  <slide>
-    <div class='card'>
-      <img src='../images/ex1.jpg' alt>
-      <h6>Espaço do negro no teatro</h6>
-      <p>Placeat voluptate temporibus animi, a rem voluptas odio possimus.</p>
-      <h5 class='autor'>Por: Nome do Autor</h5>
-    </div>
-  </slide>
-  <slide>
-    <div class='card'>
-      <img src='../images/ex3.jpg' alt>
-      <h6>Estética Periférica</h6>
-      <p>Placeat voluptate temporibus animi, a rem voluptas odio possimus.</p>
-      <h5 class='autor'>Por: Nome do Autor</h5>
-    </div>
-  </slide>
-  <slide>
-    <div class='card'>
-      <img src='../images/ex2.jpg' alt>
-      <h6>Constelação Familiar</h6>
-      <p>Placeat voluptate temporibus animi, a rem voluptas odio possimus.</p>
-      <h5 class='autor'>Por: Nome do Autor</h5>
-    </div>
-  </slide>
-  <slide>
-    <div class='card'>
-      <img src='../images/ex4.jpeg' alt>
-      <h6>Inserir Título do Card</h6>
-      <p>Placeat voluptate temporibus animi, a rem voluptas odio possimus.</p>
-      <h5 class='autor'>Por: Nome do Autor</h5>
-    </div>
-  </slide>
-  <slide>
-    <div class='card'>
-      <img src='../images/ex1.jpg' alt>
-      <h6>Título do Card</h6>
-      <p>Placeat voluptate temporibus animi, a rem voluptas odio possimus.</p>
-      <h5 class='autor'>Por: Nome do Autor</h5>
-    </div>
-  </slide>
-</carousel>
-<!-- </div> -->
+<div class='card'>
+  <img @click="visualizarProjeto()" :src='this.src' alt>
+  <h6>{{this.titulo}}</h6>
+  <p>{{this.descricao}}</p>
+  <h5 class='autor'>Por: {{this.autor}}</h5>
+</div>
 </template>
 
 <script>
-import {
-  Carousel,
-  Slide
-} from 'vue-carousel'
-
 export default {
   name: 'cardProjeto',
-  components: {
-    Carousel,
-    Slide
-  },
   props: {
-    perPage: Number
+    src: String,
+    titulo: String,
+    descricao: String,
+    autor: String
+  },
+  methods: {
+    visualizarProjeto () {
+      this.$router.push({
+        name: 'Projeto',
+        params: {
+          // id: this.projetoSelecionado.id,
+          projeto: this.projetoSelecionado.projeto
+        }
+      })
+    }
   }
 }
 </script>
@@ -67,11 +34,11 @@ export default {
 #cardContainer {
     max-width: 100%;
     height: 600px;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 0;
+    // display: flex;
+    // justify-content: space-around;
+    // margin-left: 20px;
+    // margin-right: 20px;
+    // margin-bottom: 0;
     // @media(max-width: 800px) {
     //   width: 35%;
     //   height: 600px;
@@ -86,6 +53,7 @@ export default {
     -webkit-box-shadow: 0 3px 4px -1px rgba(158, 158, 158, 1);
     -moz-box-shadow: 0 3px 4px -1px rgba(158, 158, 158, 1);
     box-shadow: 0 3px 4px -1px rgba(158, 158, 158, 1);
+    cursor: pointer;
 }
 .card h6 {
     font-size: 25px;
@@ -113,26 +81,5 @@ export default {
     width: 370px;
     height: 250px;
     border-radius: 30px 30px 0 0;
-}
-// .VueCarousel-wraper {
-//     width: 90%;
-//     align-self: center;
-//
-//     @media(max-width: 800px) {
-//         width: 90%;
-//     }
-// }
-.VueCarousel {
-    width: 90%;
-    align-self: center;
-    @media(max-width: 800px) {
-        width: 50%;
-    }
-}
-.VueCarousel-wrapper {
-    height: 510px;
-}
-.VueCarousel-slide {
-    max-width: 395px;
 }
 </style>

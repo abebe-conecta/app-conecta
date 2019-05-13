@@ -1,6 +1,6 @@
 <template>
     <div id='container-titulo-projeto'>
-        <img src='../images/logo-conecta-branco.png' style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt=''>
+        <img src='@/assets/images/Navbar/logo-conecta-branco.png' style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt=''>
         <h3>Conte mais sobre seu projeto</h3>
 
         <form action=''>

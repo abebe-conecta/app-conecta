@@ -1,29 +1,37 @@
 <template>
-  <div id='passo-um'>
-    <img
-      src='../../images/logo-conecta-branco.png'
-      style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;'
-      alt
-    >
-    <h4>Passo 1 de 4</h4>
+<div id='passo-um'>
+  <router-link to='/'> <img src='@/assets/images/Navbar/logo-conecta-branco.png' style='align-self: normal; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt='logo conecta'></router-link>
 
-    <form action>
-        <label for>Descreve seu projeto</label>
-        <textarea name='' id='' cols='30' rows='10' placeholder='Conta pra gente de maneira resumida o que é o seu projeto ou negócio'></textarea>
+  <h4>Passo 1 de 4</h4>
 
-        <label for>Objetivo</label>
-        <textarea name='' id='' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?'></textarea>
-    </form>
+  <form action>
+    <label for>Descreve seu projeto</label>
+    <textarea v-model='descricao' name='' id='' cols='30' rows='10' placeholder='Conta pra gente de maneira resumida o que é o seu projeto ou negócio' required></textarea>
 
-    <router-link to='/passo-dois'>
-      <button id='botao-passo-um'>Próximo</button>
-    </router-link>
-  </div>
+    <label for>Objetivo</label>
+    <textarea v-model='objetivo' name='' id='' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?' required></textarea>
+  </form>
+
+  <router-link to='/passo-dois' :disabled='!camposPreenchidos'>
+    <button id='botao-passo-um' :disabled='!camposPreenchidos'>Próximo</button>
+  </router-link>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'passo-um'
+  name: 'passo-um',
+  data () {
+    return {
+      descricao: '',
+      objetivo: ''
+    }
+  },
+  computed: {
+    camposPreenchidos () {
+      return this.descricao !== '' && this.objetivo !== ''
+    }
+  }
 }
 </script>
 
@@ -40,60 +48,73 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 img {
   width: 200px;
 }
+
 h4 {
   font-size: 20pt;
   font-weight: normal;
   letter-spacing: 4px;
 }
+
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #511CF6;
-    border-radius: 20px;
-    width: 50%;
-    height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #511CF6;
+  border-radius: 20px;
+  width: 50%;
+  height: 50%;
 }
+
 label {
-    align-self: baseline;
-    margin-top: 30px;
-    margin-left: 2rem;
-    margin-bottom: 0.5em;
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: 4px;
+  align-self: baseline;
+  margin-top: 30px;
+  margin-left: 2rem;
+  margin-bottom: 0.5em;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 4px;
 }
+
 textarea {
-    width: 90%;
-    height: 50px;
-    border-radius: 10px;
-    margin-top: 0px;
-    margin-bottom: 30px;
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
+
 textarea::placeholder {
-    font-family: "Comfortaa", cursive;
-    color: #B4B4B4;
-    text-align: left;
-    font-size: 10pt;
-    letter-spacing: 4px;
-    line-height: 17px;
-    padding: 8px 0 0 10px
+  font-family: 'Comfortaa', cursive;
+  color: #B4B4B4;
+  text-align: left;
+  font-size: 10pt;
+  letter-spacing: 4px;
+  line-height: 17px;
+  padding: 8px 0 0 10px;
 }
+
 #botao-passo-um {
-    font-family: 'Comfortaa', cursive;
-    width: 181px;
-    height: 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 0px;
-    border-radius: 90px;
-    background-color: #ed4054;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+  font-family: 'Comfortaa', cursive;
+  width: 181px;
+  height: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 0;
+  border-radius: 90px;
+  background-color: #ed4054;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+#botao-passo-um:disabled {
+  background-color: gray;
+  cursor: default;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id='container-form-login'>
     <navbar :ativo='false'></navbar>
-    <img class='logo-login' src='@/images/logo-conecta-azul.png'>
+    <img class='logo-login' src='@/assets/images/Navbar/logo-conecta-azul.png'>
     <button id='button-login-fb'>Entrar com Facebook</button>
     <form>
       <input type='email' placeholder='e-mail'>
@@ -10,7 +10,7 @@
         <button class='button-login'>Entrar</button>
       </router-link>
     </form>
-    <img src='@/images/ou-linha.jpg'>
+    <img src='@/assets/images/Rodape/ou-linha.jpg'>
     <router-link to='/cadastro'>
       <button id='botao-cadastro'>Cadastre-se</button>
     </router-link>

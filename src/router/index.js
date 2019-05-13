@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import Login from '@/views/Login'
-import Cadastro from '@/views/Cadastro'
+import Cadastrar from '@/views/Cadastrar'
 import EnviarTelaUm from '@/views/EnviarTelaUm'
 import TodosProjetos from '@/views/TodosProjetos'
 import TituloRascunho from '@/views/TituloRascunho'
@@ -11,6 +11,8 @@ import PassoDois from '@/views/EnviarProjeto/PassoDois'
 import PassoTres from '@/views/EnviarProjeto/PassoTres'
 import PassoQuatro from '@/views/EnviarProjeto/PassoQuatro'
 import ProjetoEnviado from '@/views/ProjetoEnviado'
+import VisualizarProjeto from '@/views/VisualizarProjeto'
+import ComoFunciona from '@/views/ComoFunciona'
 
 Vue.use(Router)
 
@@ -22,6 +24,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/como-funciona',
+      name: 'ComoFunciona',
+      component: ComoFunciona
+    },
+    {
       path: '/login',
       name: 'Login',
       component: Login
@@ -29,7 +36,7 @@ export default new Router({
     {
       path: '/cadastro',
       name: 'Cadastro',
-      component: Cadastro
+      component: Cadastrar
     },
     {
       path: '/enviar-projeto',
@@ -40,6 +47,11 @@ export default new Router({
       path: '/projetos',
       name: 'TodosProjetos',
       component: TodosProjetos
+    },
+    {
+      path: '/projetos/:projetoId',
+      name: 'Visualizar',
+      component: VisualizarProjeto
     },
     {
       path: '/titulo-rascunho',
