@@ -6,10 +6,10 @@
 
   <form action>
     <label for>Descreve seu projeto</label>
-    <textarea v-model='descricao' name='' id='' cols='30' rows='10' placeholder='Conta pra gente de maneira resumida o que é o seu projeto ou negócio' required></textarea>
+    <textarea v-model='descricao' cols='30' rows='10' placeholder='Conta pra gente de maneira resumida o que é o seu projeto ou negócio' required></textarea>
 
     <label for>Objetivo</label>
-    <textarea v-model='objetivo' name='' id='' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?' required></textarea>
+    <textarea v-model='objetivo' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?' required></textarea>
   </form>
 
   <router-link to='/passo-dois' :disabled='!camposPreenchidos'>
@@ -21,15 +21,25 @@
 <script>
 export default {
   name: 'passo-um',
-  data () {
-    return {
-      descricao: '',
-      objetivo: ''
-    }
-  },
   computed: {
     camposPreenchidos () {
       return this.descricao !== '' && this.objetivo !== ''
+    },
+    descricao: {
+      get () {
+        return this.$store.state.projeto.descricao
+      },
+      set (value) {
+        this.$store.commit('setProjetoDescricao', value)
+      }
+    },
+    objetivo: {
+      get () {
+        return this.$store.state.projeto.objetvip
+      },
+      set (value) {
+        this.$store.commit('setProjetoObjetivo', value)
+      }
     }
   }
 }

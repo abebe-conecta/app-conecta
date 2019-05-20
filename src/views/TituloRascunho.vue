@@ -5,11 +5,11 @@
 
         <form action=''>
             <label for=''>Nome do projeto</label>
-            <input type='text'>
+            <input type='text' v-model='nome' required>
 
             <label for=''>Categoria</label>
 
-            <select name='cars'>
+            <select name='opcoes' v-model='opcoes' required>
                 <option value=''></option>
                 <option value='saab'>Saab</option>
                 <option value='fiat'>Fiat</option>
@@ -17,15 +17,20 @@
             </select>
         </form>
 
-        <router-link to='/login'>
-        <button id='botao-comecar-envio'>Começar</button>
+        <router-link to='/login' :disabled='!camposPreenchidos'>
+        <button id='botao-comecar-envio' :disabled='!camposPreenchidos'>Começar</button>
         </router-link>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'titulo-rascunho'
+  name: 'titulo-rascunho',
+  computed: {
+    camposPreenchidos () {
+      return this.nome !== '' && this.opcoes !== ''
+    }
+  }
 }
 </script>
 
@@ -94,5 +99,9 @@ select {
     color: white;
     text-transform: uppercase;
     letter-spacing: 4px;
+}
+#botao-comecar-envio:disabled {
+  background-color: gray;
+  cursor: default;
 }
 </style>

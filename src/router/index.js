@@ -13,6 +13,7 @@ import PassoQuatro from '@/views/EnviarProjeto/PassoQuatro'
 import ProjetoEnviado from '@/views/ProjetoEnviado'
 import VisualizarProjeto from '@/views/VisualizarProjeto'
 import ComoFunciona from '@/views/ComoFunciona'
+import PerguntasFrequentes from '@/views/PerguntasFrequentes'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/como-funciona',
       name: 'ComoFunciona',
       component: ComoFunciona
+    },
+    {
+      path: '/perguntas-frequentes',
+      name: 'PerguntasFrequentes',
+      component: PerguntasFrequentes
     },
     {
       path: '/login',

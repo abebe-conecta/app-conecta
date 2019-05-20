@@ -6,7 +6,7 @@
       <router-link to='/enviar-projeto'>Enviar</router-link>
       <router-link to='/login'>Login</router-link>
       <router-link to='/como-funciona'>Como Funciona</router-link>
-      <router-link to='/faq'>FAQ</router-link>
+      <router-link to='/perguntas-frequentes'>Perguntas Frequentes</router-link>
     </div>
   </div>
   <div id='footerSmall' v-if='ativo'>
@@ -15,7 +15,7 @@
       <router-link to='/enviar-projeto'>Enviar</router-link>
       <router-link to='/login'>Login</router-link>
       <router-link to='/como-funciona'>Como Funciona</router-link>
-      <router-link to='/faq'>Perguntas Frequentes</router-link>
+      <router-link to='/perguntas-frequentes'>Perguntas Frequentes</router-link>
     </div>
   </div>
 </div>

@@ -5,10 +5,10 @@
 
   <form action>
     <label for>Local</label>
-    <textarea v-model='local' name id cols='30' rows='10' placeholder='Bairro, cidade e estado onde o seu projeto já foi ou será realizado'></textarea>
+    <textarea v-model='local' name id cols='30' rows='10' placeholder='Bairro, cidade e estado onde o seu projeto já foi ou será realizado' required></textarea>
 
     <label for>Valor estimado</label>
-    <input v-model='valor' name='valor' id='' rows='10' placeholder='R$ 0,00'>
+    <input v-model='valor' name='valor' id='' rows='10' placeholder='R$ 0,00' required>
   </form>
 
   <router-link to='/passo-quatro'>
@@ -20,10 +20,25 @@
 <script>
 export default {
   name: 'passo-tres',
-  data () {
-    return {
-      local: '',
-      valor: ''
+  computed: {
+    camposPreenchidos () {
+      return this.local !== '' && this.valor !== ''
+    },
+    local: {
+      get () {
+        return this.$store.state.projeto.local
+      },
+      set (value) {
+        this.$store.commit('setProjetoLocal', value)
+      }
+    },
+    valor: {
+      get () {
+        return this.$store.state.projeto.valor
+      },
+      set (value) {
+        this.$store.commit('setProjetoValor', value)
+      }
     }
   }
 }

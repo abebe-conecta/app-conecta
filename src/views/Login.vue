@@ -2,7 +2,6 @@
   <div id='container-form-login'>
     <navbar :ativo='false'></navbar>
     <img class='logo-login' src='@/assets/images/Navbar/logo-conecta-azul.png'>
-    <button id='button-login-fb'>Entrar com Facebook</button>
     <form>
       <input type='email' placeholder='e-mail'>
       <input type='password' placeholder='senha'>
@@ -43,21 +42,6 @@ export default {
 .logo-login {
   width: 250px;
   height: 40px;
-}
-#button-login-fb {
-  font-family: 'Comfortaa', cursive;
-  background-color: #556dff;
-  border-color: #556dff;
-  border-radius: 10px;
-  border-style: none;
-  text-transform: none !important;
-  letter-spacing: 4px;
-  width: 410px;
-  height: 45px;
-  font-size: 17px;
-  color: white;
-  font-weight: lighter;
-  margin: 50px 505px 30px 505px;
 }
 form {
   display: flex;

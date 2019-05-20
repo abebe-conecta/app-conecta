@@ -2,7 +2,7 @@
   <div class="cadastro">
       <navbar :ativo='true'></navbar>
       <div class="cadastro-container">
-          <h2 class='cadastro-titulo'>Cadastro</h2>
+          <h2 class='-titulo'>Cadastro</h2>
       </div>
         <form class='form-cadastro'>
           <label for="">Nome*</label>
@@ -65,16 +65,16 @@ export default {
 .cadastro-container {
     padding-top: 90px;
     // border-top: #556dff 2px solid;
-}
-.cadastro-titulo {
-    text-transform: uppercase;
-    color: #ED4054;
+    .-titulo {
+        text-transform: uppercase;
+        color: #ED4054;
 
-    &::after {
-        content: ' _';
-        border-radius: 10px;
-        @media(max-width: 800px) {
-            width: 50%;
+        &::after {
+            content: ' _';
+            border-radius: 10px;
+            @media(max-width: 800px) {
+                width: 50%;
+            }
         }
     }
 }
@@ -96,6 +96,24 @@ export default {
         margin-bottom: 20px;
         font-size: 15pt;
     }
+
+    > input {
+        width: 860px;
+        height: 45px;
+        // margin-left: 505px;
+        // margin-right: 505px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+        border: lightgray 1px solid;
+    }
+
+    > input::placeholder {
+        font-family: 'Comfortaa', cursive;
+        color: gray;
+        text-align: left;
+        font-size: 10pt;
+        letter-spacing: 4px;
+    }
 }
 
 #botao-cadastrar {
@@ -109,22 +127,6 @@ export default {
     background-color: #ed4054;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 4px;
-}
-input {
-    width: 860px;
-    height: 45px;
-    // margin-left: 505px;
-    // margin-right: 505px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    border: lightgray 1px solid;
-}
-input::placeholder {
-    font-family: 'Comfortaa', cursive;
-    color: gray;
-    text-align: left;
-    font-size: 10pt;
     letter-spacing: 4px;
 }
 </style>

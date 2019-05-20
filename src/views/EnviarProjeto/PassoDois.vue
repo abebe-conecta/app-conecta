@@ -1,41 +1,56 @@
 <template>
-  <div id='passo-um'>
+<div id='passo-um'>
   <router-link to='/'> <img src='@/assets/images/Navbar/logo-conecta-branco.png' style='align-self: left; width: 200px; height: auto; margin-top: 20px; margin-left: 20px;' alt='logo conecta'></router-link>
-    <h4>Passo 2 de 4</h4>
+  <h4>Passo 2 de 4</h4>
 
-    <form action>
-      <label for>Formato do projeto</label>
-      <select v-model='formato' name='cars'>
-        <option value></option>
-        <option value='saab'>Exposição</option>
-        <option value='fiat'>Intervenção</option>
-        <option value='audi'>Produção</option>
-        <option value='audi'>Roda de Conversa</option>
-        <option value='audi'>Ofcina</option>
-        <option value='audi'>Show</option>
-      </select>
+  <form action>
+    <label for>Formato do projeto</label>
+    <select v-model='formato' name='cars' required>
+      <option value></option>
+      <option value='saab'>Exposição</option>
+      <option value='fiat'>Intervenção</option>
+      <option value='audi'>Produção</option>
+      <option value='audi'>Roda de Conversa</option>
+      <option value='audi'>Ofcina</option>
+      <option value='audi'>Show</option>
+    </select>
 
-      <label for>Faça uma lista com itens que você precisa no seu projeto</label>
-      <div id='radio-button-lista'>
-        <input type='RADIO' name='OPCAO' value='op1'> Opção 1
-        <input type='RADIO' name='OPCAO' value='op2'> Opção 2
-        <input type='RADIO' name='OPCAO' value='op2'> Adicionar opção
-      </div>
-    </form>
+    <label for>Faça uma lista com itens que você precisa no seu projeto</label>
+    <div id='radio-button-lista' required>
+      <input type='RADIO' name='OPCAO' value='op1'> Opção 1
+      <input type='RADIO' name='OPCAO' value='op2'> Opção 2
+      <input type='RADIO' name='OPCAO' value='op2'> Adicionar opção
+    </div>
+  </form>
 
-    <router-link to='/passo-tres'>
-      <button id='botao-passo-dois'>Próximo</button>
-    </router-link>
-  </div>
+  <router-link to='/passo-tres'>
+    <button id='botao-passo-dois'>Próximo</button>
+  </router-link>
+</div>
 </template>
 
 <script>
 export default {
   name: 'passo-dois',
-  data () {
-    return {
-      formato: '',
-      necessidade: ''
+  computed: {
+    camposPreenchidos () {
+      return this.formato !== '' && this.necessidade !== ''
+    },
+    formato: {
+      get () {
+        return this.$store.state.projeto.formato
+      },
+      set (value) {
+        this.$store.commit('setProjetoFormato', value)
+      }
+    },
+    necessidade: {
+      get () {
+        return this.$store.state.projeto.necessidade
+      },
+      set (value) {
+        this.$store.commit('setProjetoNecessidade', value)
+      }
     }
   }
 }
@@ -54,14 +69,17 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+
 img {
   width: 200px;
 }
+
 h4 {
   font-size: 20pt;
   font-weight: normal;
   letter-spacing: 4px;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -72,6 +90,7 @@ form {
   width: 50%;
   height: 50%;
 }
+
 label {
   align-self: baseline;
   margin-top: 30px;
@@ -81,12 +100,14 @@ label {
   font-weight: normal;
   letter-spacing: 4px;
 }
+
 select {
   width: 90%;
   height: 65px;
   border-radius: 10px;
   margin-bottom: 0px;
 }
+
 #radio-button-lista {
   display: flex;
   flex-flow: column wrap;
@@ -95,10 +116,12 @@ select {
   font-size: 9pt;
   letter-spacing: 2px;
 }
+
 #radio-button-lista input::after {
   content: '           _____________________';
   color: white;
 }
+
 textarea::placeholder {
   font-family: 'Comfortaa', cursive;
   color: #b4b4b4;
@@ -108,6 +131,7 @@ textarea::placeholder {
   line-height: 17px;
   padding: 8px 0 0 10px;
 }
+
 #botao-passo-dois {
   font-family: 'Comfortaa', cursive;
   width: 181px;
