@@ -9,7 +9,8 @@
     <textarea v-model='descricao' cols='30' rows='10' placeholder='Conta pra gente de maneira resumida o que é o seu projeto ou negócio' required></textarea>
 
     <label for>Objetivo</label>
-    <textarea v-model='objetivo' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?' required></textarea>
+    <textarea v-model='objetivo' cols='30' rows='10' placeholder='Qual problema o seu projeto ou negócio pretende resolver?' required>
+    </textarea>
   </form>
 
   <router-link to='/passo-dois' :disabled='!camposPreenchidos'>
@@ -19,28 +20,39 @@
 </template>
 
 <script>
+// import {
+//   mapGetters
+// } from 'vuex'
+
 export default {
   name: 'passo-um',
   computed: {
     camposPreenchidos () {
       return this.descricao !== '' && this.objetivo !== ''
     },
-    descricao: {
-      get () {
-        return this.$store.state.projeto.descricao
-      },
-      set (value) {
-        this.$store.commit('setProjetoDescricao', value)
-      }
-    },
-    objetivo: {
-      get () {
-        return this.$store.state.projeto.objetvip
-      },
-      set (value) {
-        this.$store.commit('setProjetoObjetivo', value)
+    data () {
+      return {
+        descricao: null,
+        objetivo: null
       }
     }
+    //   descricao: {
+    //     get() {
+    //       return this.projeto.descricao
+    //     },
+    //     set(value) {
+    //       this.$store.commit('setProjetoDescricao', value)
+    //     }
+    //   },
+    //   objetivo: {
+    //     get () {
+    //       return this.projeto.objetivo
+    //     },
+    //     set (value) {
+    //       this.$store.commit('setProjetoObjetivo', value)
+    //     }
+    //   },
+    //   ...mapGetters (['projeto'])
   }
 }
 </script>
@@ -78,6 +90,7 @@ form {
   border-radius: 20px;
   width: 50%;
   height: 50%;
+  outline: none;
 }
 
 label {
@@ -96,6 +109,7 @@ textarea {
   border-radius: 10px;
   margin-top: 0;
   margin-bottom: 30px;
+  outline: none;
 }
 
 textarea::placeholder {

@@ -73,6 +73,10 @@ img {
     display: inline;
     margin-right: 60px;
     width: 40%;
+    height: auto;
+}
+.menu-desktop:hover {
+    width: 45%;
 }
 ul {
     display: flex;
@@ -84,6 +88,7 @@ ul {
         display: none;
     }
 }
+
 li {
     color: black;
     font-size: 20px;
@@ -96,6 +101,10 @@ li:hover {
     border-radius: 50px;
     text-align: center;
     color: white;
+    font-size: 15px;
+}
+.text-nav:hover {
+  padding-top: 12px
 }
 a:-webkit-any-link {
     text-decoration: none;

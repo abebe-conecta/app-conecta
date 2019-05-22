@@ -1,69 +1,66 @@
 <template>
 <div id='container'>
   <h2>Projetos</h2>
-  <!-- <Carousel :perPageCustom='[800, 1]' :paginationEnabled='true' :centerMode='true'>
-    <slide> -->
-    <div class="container-card-projetos">
-      <cardProjetos v-for='(i, index) in cardConteudo' :key='index' :src='i.src' :titulo='i.titulo' :descricao='i.descricao' :autor='i.autor'>
-      </cardProjetos>
-    </div>
-    <!-- </slide>
-  </Carousel> -->
+  <div class="container-card-projetos">
+    <card-projetos-carousel>
+    </card-projetos-carousel>
+        <!-- <cardProjetos v-for='(i, index) in cardConteudo' :key='index' :src='i.src' :titulo='i.titulo' :descricao='i.descricao' :autor='i.autor'> -->
+        <!-- </cardProjetos> -->
+  </div>
   <botao-ver-mais></botao-ver-mais>
 </div>
 </template>
 
 <script>
-import cardProjetos from '@/components/CardProjetos'
+// import cardProjetos from '@/components/CardProjetos'
+import cardProjetosCarousel from '@/components/cardProjetosCarousel'
 import BotaoVerMais from '@/components/BotaoVerMais'
-import {
-  Carousel,
-  Slide
-} from 'vue-carousel'
+// import {
+//   Carousel,
+//   Slide
+// } from 'vue-carousel'
 
 export default {
   name: 'Projetos',
   components: {
-    cardProjetos,
-    BotaoVerMais,
-    Carousel,
-    Slide
-  },
-  data () {
-    return {
-      cardConteudo: [{
-        src: require('@/assets/images/Cards/ex3.jpg'),
-        titulo: 'Teatro Negro',
-        descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
-        autor: 'Nome do Autor'
-      }, {
-        src: require('@/assets/images/Cards/ex2.jpg'),
-        titulo: 'Estética Periférica',
-        descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
-        autor: 'Nome do Autor'
-      }, {
-        src: require('@/assets/images/Cards/ex4.jpeg'),
-        titulo: 'Constelação Familiar',
-        descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
-        autor: 'Nome do Autor'
-      }, {
-        src: require('@/assets/images/Cards/ex1.jpg'),
-        titulo: 'Título do Card',
-        descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
-        autor: 'Nome do Autor'
-      }, {
-        src: require('@/assets/images/Cards/ex1.jpg'),
-        titulo: 'Estética Periférica',
-        descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
-        autor: 'Nome do Autor'
-      }]
-    }
-  },
-  props: {
-    perPageCustom: Array,
-    paginationEnabled: Boolean,
-    centerMode: Boolean
+    cardProjetosCarousel,
+    BotaoVerMais
   }
+  // data() {
+  //   return {
+  //     cardConteudo: [{
+  //       src: require('@/assets/images/Cards/ex3.jpg'),
+  //       titulo: 'Teatro Negro',
+  //       descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
+  //       autor: 'Nome do Autor'
+  //     }, {
+  //       src: require('@/assets/images/Cards/ex2.jpg'),
+  //       titulo: 'Estética Periférica',
+  //       descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
+  //       autor: 'Nome do Autor'
+  //     }, {
+  //       src: require('@/assets/images/Cards/ex4.jpeg'),
+  //       titulo: 'Constelação Familiar',
+  //       descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
+  //       autor: 'Nome do Autor'
+  //     }, {
+  //       src: require('@/assets/images/Cards/ex1.jpg'),
+  //       titulo: 'Título do Card',
+  //       descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
+  //       autor: 'Nome do Autor'
+  //     }, {
+  //       src: require('@/assets/images/Cards/ex1.jpg'),
+  //       titulo: 'Estética Periférica',
+  //       descricao: 'Placeat voluptate temporibus animi, a rem voluptas odio possimus.',
+  //       autor: 'Nome do Autor'
+  //     }]
+  //   }
+  // },
+  // props: {
+  //   perPageCustom: Array,
+  //   paginationEnabled: Boolean,
+  //   centerMode: Boolean
+  // }
 }
 </script>
 
@@ -109,9 +106,9 @@ export default {
     }
 }
 .container-card-projetos {
-  display: flex;
-  flex-flow: row wrap !important;
-  width: 90%;
-  justify-content: space-around
+    display: flex;
+    flex-flow: row wrap !important;
+    width: 90%;
+    justify-content: space-around;
 }
 </style>

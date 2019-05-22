@@ -1,5 +1,5 @@
 // import Project from '../../api/project'
-
+/* eslint-disable */
 const state = {
   projetos: [],
   descricao: '',
@@ -13,7 +13,7 @@ const state = {
 }
 
 const getters = {
-  projeto: state => {
+  projeto: (state) => {
     return {
       descricao: state.descricao,
       objetivo: state.objetivo,
@@ -28,7 +28,11 @@ const getters = {
 }
 
 const actions = {
-
+  setProjetoDescricao({
+    commit
+  }, descricao) {
+    commit('setProjetoDescricao', descricao)
+  },
 }
 
 const mutations = {

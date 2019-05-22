@@ -5,7 +5,7 @@
 
   <form action>
     <label for>Formato do projeto</label>
-    <select v-model='formato' name='cars' required>
+    <select name='formato' required>
       <option value></option>
       <option value='saab'>Exposição</option>
       <option value='fiat'>Intervenção</option>
@@ -35,23 +35,23 @@ export default {
   computed: {
     camposPreenchidos () {
       return this.formato !== '' && this.necessidade !== ''
-    },
-    formato: {
-      get () {
-        return this.$store.state.projeto.formato
-      },
-      set (value) {
-        this.$store.commit('setProjetoFormato', value)
-      }
-    },
-    necessidade: {
-      get () {
-        return this.$store.state.projeto.necessidade
-      },
-      set (value) {
-        this.$store.commit('setProjetoNecessidade', value)
-      }
     }
+    // formato: {
+    //   get() {
+    //     return this.$store.state.projeto.formato
+    //   },
+    //   set(value) {
+    //     this.$store.commit('setProjetoFormato', value)
+    //   }
+    // },
+    // necessidade: {
+    //   get() {
+    //     return this.$store.state.projeto.necessidade
+    //   },
+    //   set(value) {
+    //     this.$store.commit('setProjetoNecessidade', value)
+    //   }
+    // }
   }
 }
 </script>
@@ -89,6 +89,7 @@ form {
   border-radius: 70px;
   width: 50%;
   height: 50%;
+  outline: none;
 }
 
 label {
@@ -106,6 +107,8 @@ select {
   height: 65px;
   border-radius: 10px;
   margin-bottom: 0px;
+  outline: none;
+  outline: none;
 }
 
 #radio-button-lista {

@@ -6,12 +6,12 @@
   <form>
     <div class='container-inputs tags'>
       <label for>Tags</label>
-      <textarea v-model='tags' name id cols='30' rows='10' placeholder='Insira até 5 palavras-chaves que tem a ver com seu projeto, assim fica mais fácil de aparecer na busca' required></textarea>
+      <textarea v-model='tags' cols='30' rows='10' placeholder='Insira até 5 palavras-chaves que tem a ver com seu projeto, assim fica mais fácil de aparecer na busca' required></textarea>
     </div>
 
     <div class='container-inputs imagem'>
       <label for>Adicionar Foto</label>
-      <vue-cropper ref='cropper' :src='imgSrc' alt='Source Image' :cropmove='cropImage' required>
+      <vue-cropper v-model='imagem' ref='cropper' :src='imgSrc' alt='Source Image' :cropmove='cropImage' required>
       </vue-cropper>
     </div>
   </form>
@@ -33,33 +33,34 @@ export default {
   computed: {
     camposPreenchidos () {
       return this.tags !== '' && this.imagem !== ''
-    },
-    tags: {
-      get () {
-        return this.$store.state.projeto.tags
-      },
-      set (value) {
-        this.$store.commit('setProjetoTags', value)
-      }
-    },
-    imagem: {
-      get () {
-        return this.$store.state.projeto.imagem
-      },
-      set (value) {
-        this.$store.commit('setProjetoImagem', value)
-      }
-    }
-  },
-  methods: {
-    salvarCardProjeto () {
-      const projeto = this.projetoInserido
-      this.$store.commit('salvarProjeto', Object.assign({}, projeto))
-        .catch(() => {
-          alert('Algo deu errado. Por favor, tente salvar novamente')
-        })
     }
   }
+  //   tags: {
+  //     get() {
+  //       return this.$store.state.projeto.tags
+  //     },
+  //     set(value) {
+  //       this.$store.commit('setProjetoTags', value)
+  //     }
+  //   },
+  //   imagem: {
+  //     get() {
+  //       return this.$store.state.projeto.imagem
+  //     },
+  //     set(value) {
+  //       this.$store.commit('setProjetoImagem', value)
+  //     }
+  //   }
+  // },
+  // methods: {
+  //   salvarCardProjeto() {
+  //     const projeto = this.projetoInserido
+  //     this.$store.commit('salvarProjeto', Object.assign({}, projeto))
+  //       .catch(() => {
+  //         alert('Algo deu errado. Por favor, tente salvar novamente')
+  //       })
+  //   }
+  // }
   // methods: {
   //   adicionarProjeto() {
   //     const projeto = this.
@@ -121,6 +122,7 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  outline: none;
 }
 
 .container-inputs {
@@ -149,7 +151,8 @@ textarea {
   width: 85%;
   height: 110px;
   border-radius: 10px;
-  margin: 0 25px 30px 15px
+  margin: 0 25px 30px 15px;
+  outline: none;
 }
 
 textarea::placeholder {

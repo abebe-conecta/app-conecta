@@ -122,6 +122,7 @@ export default {
         // right: 20px;
         transition: transform 0.3s ease-in-out;
         padding: 0;
+        right: 27%;
     }
 }
 </style>

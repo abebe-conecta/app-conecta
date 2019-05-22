@@ -14,48 +14,51 @@ export default {
 
 <style lang='scss' scoped>
 #mais {
-  margin: 0;
-  width: 100%;
-  background-color: #546DFE;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: center;
-  text-align: center;
+    margin: 0;
+    width: 100%;
+    background-color: #546DFE;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    text-align: center;
 }
 p {
-  color: white;
-  font-size: 16px;
-  align-self: center;
+    color: white;
+    font-size: 16px;
+    align-self: center;
 }
 .botao-saiba-mais {
-  font-family: 'Comfortaa', cursive;
-  background-color: #ff3864;
-  border-style: none;
-  border-radius: 75px;
-  width: 240px;
-  height: 45px;
-  margin-top: 45px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin: 55px 0 55px 0;
-  font-size: 20px;
-  color: white;
+    font-family: 'Comfortaa', cursive;
+    background-color: #ff3864;
+    border-style: none;
+    border-radius: 75px;
+    width: 240px;
+    height: 45px;
+    margin-top: 45px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 55px 0;
+    font-size: 20px;
+    color: white;
+}
+a {
+    margin-top: -100px;
 }
 .big {
-  width: 100%;
-  height: auto;
-  @media(max-width: 800px) {
-    display: none;
-  }
+    width: 100%;
+    height: auto;
+    @media(max-width: 800px) {
+        display: none;
+    }
 }
 .small {
-  display: none;
-  @media(max-width: 800px) {
-    display: inline;
-    width: 100%;
-    height: auto
-  }
+    display: none;
+    @media(max-width: 800px) {
+        display: inline;
+        width: 100%;
+        height: auto;
+    }
 }
 </style>
