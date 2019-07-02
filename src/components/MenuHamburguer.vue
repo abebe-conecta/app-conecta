@@ -35,6 +35,17 @@ export default {
 </script>
 
 <style lang='scss'>
+.bm-menu {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #556dff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
 .bm-burger-button {
     position: fixed;
     width: 46px;
@@ -84,17 +95,6 @@ export default {
         width: 100px;
         padding: 60px 70px 0 0;
     }
-}
-.bm-menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #556dff;
-    overflow-x: hidden;
-    transition: 0.5s;
 }
 .bm-item-list {
     color: #000000;
